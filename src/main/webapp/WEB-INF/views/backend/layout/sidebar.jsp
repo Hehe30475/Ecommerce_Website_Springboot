@@ -59,26 +59,27 @@
             
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="auth">
-              	<i class="mdi mdi-clipboard-account menu-icon"></i>
-                <span class="menu-title">Role</span>
+              	<i class="menu-icon mdi mdi-file-document"></i>
+                <span class="menu-title">Order Details</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="tables">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="${classpath }/admin/role/list"> View </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="${classpath }/admin/role/add"> Add </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="${classpath }/admin/order/list"> View </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="${classpath }/admin/order/add"> Add </a></li>
                 </ul>
               </div>
             </li>
             
             
-            
+            <!-- 
             <li class="nav-item">
               <a class="nav-link" href="${classpath }/admin/order/details">
                 <i class="menu-icon mdi mdi-file-document"></i>
                 <span class="menu-title">Order Details</span>
               </a>
             </li>
+            -->
           </ul>
         </nav>
         <!-- partial -->

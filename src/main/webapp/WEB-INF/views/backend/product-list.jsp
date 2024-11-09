@@ -6,8 +6,9 @@
 
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <html lang="en">
-<jsp:include page="/WEB-INF/views/backend/layout/css.jsp"></jsp:include>
 <jsp:include page="/WEB-INF/views/backend/layout/header.jsp"></jsp:include>
+<body>
+<jsp:include page="/WEB-INF/views/backend/layout/header1.jsp"></jsp:include>
 <!-- partial -->
 <div class="container-fluid page-body-wrapper">
 	<jsp:include page="/WEB-INF/views/backend/layout/sidebar.jsp"></jsp:include>
@@ -88,7 +89,7 @@
 										<thead>
 											<tr align="center">
 												<th scope="col">No.</th>
-												<th scope="col">Id</th>
+												<!--  <th scope="col">Id</th>  -->
 												<th scope="col">Category</th>
 												<th scope="col">Name</th>
 												<th scope="col">Price</th>
@@ -109,7 +110,7 @@
 											 	<c:forEach var="product" items="${products }" varStatus="loop">
 	                                            <tr>
 	                                            	<th scope="row">${loop.index + 1 }</th>
-	                                                <td>${product.id }</td>
+	                                               <!--  <td>${product.id }</td> -->
 	                                                <td>${product.category.name }</td>
 	                                                <td>${product.name }</td>
 	                                                <td align="right">
@@ -157,7 +158,7 @@
 	                                                		</c:choose>
 	                                                	</span>
 	                                                </td>
-	                                               	<td>${product.seo }</td>
+	                                               	<!-- <td>${product.seo }</td> -->
 	                                                <td>
 	                                                	<a href="${classpath }/admin/product/edit/${product.id }" role="button" 
 	                                                							class="btn btn-primary">Edit</a>
