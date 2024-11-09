@@ -34,7 +34,7 @@
 										</div>
 										<div class="col-md-4">
 											<div class="form-group mb-4">
-												<h3>Total products: &nbsp ${productSearch.totalItems }</h3>
+												<h3>Total products:&nbsp;${productSearch.totalItems }</h3>
 											</div>
 										</div>	
 										
@@ -140,7 +140,7 @@
 																</c:choose></td>
 	
 															<td><a
-																href="${rootpath }/edit-product/${saleOrder.id }"
+																href="${classpath }/edit-product/${saleOrder.id }"
 																role="button" class="btn btn-primary">Edit</a>
 															<td><a
 																href="${rootpath }/delete-product/${saleOrder.id }"
@@ -181,7 +181,7 @@
         </div>
         <!-- main-panel ends -->
       </div>
-
+</div>
 <!-- content-wrapper ends -->
 <!-- main-panel ends -->
 
