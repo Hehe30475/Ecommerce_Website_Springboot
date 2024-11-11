@@ -111,32 +111,37 @@
 
 
     <!-- Offer Start -->
-    <div class="container-fluid offer pt-5">
-        <div class="row px-xl-5">
-            <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="${classpath}/frontend/img/offer-1.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
-                    <img src="${classpath}/frontend/img/offer-2.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid offer pt-5">
+  <div class="row px-xl-5">
+    <div class="col-md-6 pb-4">
+      <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5" style="background-image: url('${classpath}/frontend/img/2.png'); background-size: cover; background-position: center;">
+        <div class="position-relative" style="z-index: 1;">
+          <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
+          <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
+          <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
         </div>
+      </div>
     </div>
+    <div class="col-md-6 pb-4">
+      <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5" style="background-image: url('${classpath}/frontend/img/3.png'); background-size: cover; background-position: center;">
+        <div class="position-relative" style="z-index: 1;">
+          <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
+          <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
+          <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Offer End -->
 
+<div class="container-fluid mb-5">
+  <div class="row px-xl-5">
+    <div class="col-12">
+      <img class="img-fluid w-100" src="${classpath}/frontend/img/banner2.jpg" alt="Banner Image">
+    </div>
+  </div>
+</div>
 
     <!-- Products Start -->
     <div class="container-fluid pt-5">
@@ -157,7 +162,7 @@
                     </div>
                     <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                        <a href="javascript:void(0);" onclick="addToCart(1, 1, 'Ao')" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                 </div>
             </div>
@@ -284,6 +289,14 @@
     </div>
     <!-- Products End -->
 
+
+<div class="container-fluid mb-5">
+  <div class="row px-xl-5">
+    <div class="col-12">
+      <img class="img-fluid w-100" src="${classpath}/frontend/img/banner4.jpg" alt="Banner Image">
+    </div>
+  </div>
+</div>
 
     <!-- 
     <div class="container-fluid bg-secondary my-5">
@@ -466,7 +479,6 @@
 
 	<jsp:include page="/WEB-INF/views/frontend/layout/js.jsp"></jsp:include>
 
-	<!-- Add to cart
 	<script type="text/javascript">
 		addToCart = function(_productId, _quantity, _productName) {
 			let data = {
@@ -494,7 +506,9 @@
 				},
 			});
 		}
-	</script> -->
+	</script> 
+	
+	
 </body>
 
 </html>

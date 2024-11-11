@@ -12,8 +12,7 @@
 </head>
 
 <body>
-        <jsp:include page="/WEB-INF/views/frontend/layout/header.jsp"></jsp:include>
-
+    <jsp:include page="/WEB-INF/views/frontend/layout/header.jsp"></jsp:include>
     <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
@@ -26,6 +25,9 @@
         </div>
     </div>
     <!-- Page Header End -->
+
+
+
 
 
     <!-- Shop Detail Start -->
@@ -69,7 +71,7 @@
                     <small class="pt-1">(50 Reviews)</small>
                 </div>
                 <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
-                <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p>
+                <p class="mb-4"></p>
                 <div class="d-flex mb-3">
                     <p class="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
                     <form>
@@ -264,8 +266,8 @@
     </div>
     <!-- Shop Detail End -->
 
-
-    <!-- Products Start -->
+<!--
+   
     <div class="container-fluid py-5">
         <div class="text-center mb-4">
             <h2 class="section-title px-5"><span class="px-2">You May Also Like</span></h2>
@@ -352,8 +354,8 @@
             </div>
         </div>
     </div>
-    <!-- Products End -->
 
+-->
 
     <jsp:include page="/WEB-INF/views/frontend/layout/footer.jsp"></jsp:include>
 
@@ -362,7 +364,36 @@
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-        <jsp:include page="/WEB-INF/views/frontend/layout/js.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/frontend/layout/js.jsp"></jsp:include>
+    <script type="text/javascript">
+		addToCart = function(_productId,_productName) {
+			//alert("Thêm "  + _quantity + " sản phẩm '" + _productName + "' vào giỏ hàng ");
+			let data = {
+				id : _productId, //lay theo id
+				quantity : jQuery("#quantity").val(),
+				name : _productName,
+			};
+
+			//$ === jQuery
+			jQuery.ajax({
+				url : "/add-to-cart",
+				type : "POST",
+				contentType : "application/json",
+				data : JSON.stringify(data),
+				dataType : "json", //Kieu du lieu tra ve tu controller la json
+
+				success : function(jsonResult) {
+					alert(jsonResult.code + ": " + jsonResult.message);
+					let totalProducts = jsonResult.totalCartProducts;
+					$("#totalCartProductsId").html(totalProducts);
+				},
+
+				error : function(jqXhr, textStatus, errorMessage) {
+					alert(jsonResult.code + ': Đã có lỗi xay ra...!')
+				},
+			});
+		}
+	</script>
 </body>
 
 </html>

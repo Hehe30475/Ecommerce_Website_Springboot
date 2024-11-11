@@ -32,7 +32,8 @@ public class HomeController extends BaseController {
 		//2. Yeu cau service lay (gui) dl tu (vao) database (table),
 		//   tra ve data logic(variables, string,array list,..)
 		//3. Ghep data (logic) voi view tra ve cho broswer (client)
-		
+		List<Product> products = productService.findAllActive();  
+		model.addAttribute("products", products);
 		return "frontend/index";
 	}
 	@RequestMapping(value = "/product-detail/{productId}", method = RequestMethod.GET)

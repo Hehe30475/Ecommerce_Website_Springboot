@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import prj.shop.controller.BaseController;
 import prj.shop.dto.Cart;
 import prj.shop.dto.CartProduct;
+import prj.shop.dto.Contact;
 import prj.shop.model.Product;
 import prj.shop.model.SaleOrder;
 import prj.shop.model.SaleOrderProduct;
@@ -141,7 +142,7 @@ public class CartController extends BaseController {
 		}
 		return str;
 	}
-	/*
+	
 	// Luu gio hang
 	@RequestMapping(value = "/place-order", method = RequestMethod.POST)
 	ResponseEntity<Map<String, Object>> placeOrder(@RequestBody Contact customer, final HttpServletRequest request)
@@ -201,7 +202,26 @@ public class CartController extends BaseController {
 		}
 		return ResponseEntity.ok(jsonResult);
 	}
-	*/
+	
+	@RequestMapping(value = "product-cart-delete/{cartProduct.id}", method = RequestMethod.POST)
+	public ResponseEntity<Map<String, Object>> removeProduct(@RequestBody CartProduct cartProduct, final HttpServletRequest request) {
+	    Map<String, Object> jsonResult = new HashMap<String, Object>();
+	    Cart cart = null;
+	    HttpSession session = request.getSession();
+	    cart = (Cart) session.getAttribute("cart");
+
+	    // Tìm sản phẩm trong giỏ hàng để xóa
+	    int pIndex = cart.findProductById(cartProduct.getId());
+	    if (pIndex != -1) {
+	        cart.getCartProducts().remove(pIndex);
+	    }
+
+	    jsonResult.put("code", 200);
+	    jsonResult.put("totalCartPrice", toCurrency(cart.totalCartPrice()));
+	    jsonResult.put("totalCartProducts", cart.totalCartProduct());
+
+	    return ResponseEntity.ok(jsonResult);
+	}
 	
 	
 }
