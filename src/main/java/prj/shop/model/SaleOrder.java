@@ -2,6 +2,7 @@ package prj.shop.model;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -147,6 +148,5 @@ public class SaleOrder extends BaseModel {
 	public void setUserUpdateSaleOrder(User userUpdateSaleOrder) {
 		this.userUpdateSaleOrder = userUpdateSaleOrder;
 	}
-
 
 }

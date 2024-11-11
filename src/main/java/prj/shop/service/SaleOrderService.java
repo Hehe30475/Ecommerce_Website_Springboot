@@ -1,9 +1,12 @@
 package prj.shop.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import prj.shop.model.Category;
 import prj.shop.model.SaleOrder;
 
 
@@ -19,4 +22,5 @@ public class SaleOrderService extends BaseService<SaleOrder> {
 	public SaleOrder saveOrder(SaleOrder saleOrder) {
 		return super.saveOrUpdate(saleOrder);
 	}
+	
 }

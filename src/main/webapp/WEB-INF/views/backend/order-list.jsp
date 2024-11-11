@@ -105,7 +105,7 @@
 														<th scope="col">Address</th>
 														<th scope="col">Payment</th>
 														<th scope="col">Products</th>
-														<th scope="col">Create by</th>
+														<!-- <th scope="col">Create by</th> -->
 														<th scope="col">Create date</th>
 														<th scope="col">Delivery date</th>
 														<th scope="col">Status</th>
@@ -128,7 +128,12 @@
 																	value="${saleOrder.total }" minFractionDigits="0"></fmt:formatNumber>
 															</td>
 															
-															<td>${product }</td>
+															<td>
+															   <c:forEach var="product" items="${orderProductsMap[saleOrder.id]}">
+               														 ${product.name}<br/>
+           														</c:forEach>
+															</td>
+															
 															<%-- <td>${saleOrder.updateBy }</td> --%>
 															<td><fmt:formatDate pattern="dd-MM-yyyy"
 																	value="${saleOrder.createDate}" /></td>
@@ -142,11 +147,14 @@
 																	<c:otherwise>Haven't ship</c:otherwise>
 																</c:choose></td>
 	
+															<td>
+    															<form action="${classpath }/edit/${saleOrder.id }" method="post">
+       															 <button type="submit" class="btn btn-primary">Edit</button>
+   																	 </form>
+															</td>
+
 															<td><a
-																href="${classpath }/edit/${saleOrder.id }"
-																role="button" class="btn btn-primary">Edit</a>
-															<td><a
-																href="${classpath }/delete-product/${saleOrder.id }"
+																href="${classpath }/delete/${saleOrder.id }"
 																role="button" class="btn btn-secondary">Delete</a>
 														</tr>
 													</c:forEach>
@@ -174,6 +182,7 @@
 											</div>
 		                            </div>	                           
 	                        	</form>
+	                        	
                             </div>
                         </div>
                     </div>
@@ -185,10 +194,7 @@
         <!-- main-panel ends -->
       </div>
 </div>
-<!-- content-wrapper ends -->
-<!-- main-panel ends -->
 
-<!-- container-scroller -->
 <jsp:include page="/WEB-INF/views/backend/layout/js.jsp"></jsp:include>
 </body>
 </html>
