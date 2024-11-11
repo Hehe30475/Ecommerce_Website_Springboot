@@ -20,7 +20,7 @@
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="${classpath }/index"><i class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-dark mb-2" href="${classpath }/shop"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="${classpath }/product-detail"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                            <!--  <a class="text-dark mb-2" href="${classpath }/product-detail"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a> -->
                             <a class="text-dark mb-2" href="${classpath }/cart-view"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
                            <!--  <a class="text-dark mb-2" href="${classpath }/checkout"><i class="fa fa-angle-right mr-2"></i>Checkout</a> -->
                             <a class="text-dark" href="${classpath }/contact/view"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>

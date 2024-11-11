@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
+    <title>EShopper</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -33,8 +33,9 @@
     <div class="container-fluid pt-5">
         <div class="row px-xl-5">
             <!-- Shop Sidebar Start -->
+            <!--
             <div class="col-lg-3 col-md-12">
-                <!-- Price Start -->
+                <!-- 
                 <div class="border-bottom mb-4 pb-4">
                     <h5 class="font-weight-semi-bold mb-4">Filter by price</h5>
                     <form>
@@ -70,9 +71,9 @@
                         </div>
                     </form>
                 </div>
-                <!-- Price End -->
                 
-                <!-- Color Start -->
+                
+                
                 <div class="border-bottom mb-4 pb-4">
                     <h5 class="font-weight-semi-bold mb-4">Filter by color</h5>
                     <form>
@@ -108,9 +109,9 @@
                         </div>
                     </form>
                 </div>
-                <!-- Color End -->
+               
 
-                <!-- Size Start -->
+                
                 <div class="mb-5">
                     <h5 class="font-weight-semi-bold mb-4">Filter by size</h5>
                     <form>
@@ -146,9 +147,9 @@
                         </div>
                     </form>
                 </div>
-                <!-- Size End -->
+					
             </div>
-            <!-- Shop Sidebar End -->
+             -->
 
 
             <!-- Shop Product Start -->
