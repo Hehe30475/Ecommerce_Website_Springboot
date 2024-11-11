@@ -3,11 +3,12 @@ package prj.shop.controller.frontend;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import prj.shop.controller.BaseController;
+import prj.shop.model.Product;
 
 
 
@@ -23,17 +24,17 @@ public class HomeController extends BaseController {
 		
 		return "frontend/index";
 	}
-//	@RequestMapping(value = "/product-detail/{productId}", method = RequestMethod.GET)
-//	public String productDetail(final Model model,
-//			@PathVariable("productId") int productId) {
-//		//Lay san pham trong db
-//		Product product = productService.getById(productId);
-//		model.addAttribute("product", product);
-//		
-//		//Lay danh sach anh cua san pham 
-//		List<ProductImage> productImages = productImageService.getProductImagesByProductId(productId);
-//		model.addAttribute("productImages", productImages);
-//		
-//		return "frontend/product-detail";
-//	}
+	@RequestMapping(value = "/product-detail/{productId}", method = RequestMethod.GET)
+	public String productDetail(final Model model,
+		@PathVariable("productId") int productId) {
+		//Lay san pham trong db
+		//Product product = productService.getById(productId);
+		//model.addAttribute("product", product);
+		
+		//Lay danh sach anh cua san pham 
+		//List<ProductImage> productImages = productImageService.getProductImagesByProductId(productId);
+		//model.addAttribute("productImages", productImages);
+		
+		return "frontend/product-detail";
+	}
 }

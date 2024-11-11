@@ -2,6 +2,7 @@
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
+            <!--
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark" href="">FAQs</a>
                     <span class="text-muted px-2">|</span>
@@ -9,6 +10,7 @@
                     <span class="text-muted px-2">|</span>
                     <a class="text-dark" href="">Support</a>
                 </div>
+              -->
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
@@ -103,21 +105,21 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <a href="${classpath }/index" class="nav-item nav-link active">Home</a>
+                            <a href="${classpath }/shop" class="nav-item nav-link">Shop</a>
+                            <a href="${classpath }/product-detail" class="nav-item nav-link">Shop Detail</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout.html" class="dropdown-item">Checkout</a>
+                                    <a href="${classpath }/cart-view" class="dropdown-item">Shopping Cart</a>
+                                  <a href="${classpath }/checkout" class="dropdown-item">Checkout</a> 
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="${classpath }/contact/view" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <a href="${classpath }/login" class="nav-item nav-link">Login</a>
-                            <a href="" class="nav-item nav-link">Register</a>
+                            <a href="${classpath }/signup" class="nav-item nav-link">Register</a>
                         </div>
                     </div>
                 </nav>
